@@ -1,0 +1,90 @@
+/* Importing the google font  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --our-white:#f1f1f1;
+    /* --our-yellow:rgb(255, 222, 32); */
+    --our-black:#1f1e1e;
+
+    --normal-font-size:0.8rem;
+    --large-font-size:1.8rem;
+
+    --border-radius:0.35rem;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--our-black);
+    color:var(--our-white);
+}
+
+.container{
+    text-align: center;
+    width:80%;
+    max-width:30rem;
+    margin:auto;
+    margin-top: 13rem;
+}
+
+.container h1
+{
+    font-size: var(--large-font-size);
+    /* color:var(--our-yellow); */
+    font-weight: 500;
+}
+
+.container .value{
+    font-size: calc(var(--large-font-size) * 2);
+    margin-bottom: 2rem;
+}
+
+.button__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    column-gap:0.3rem;
+}
+
+.btn{
+    color:var(--our-white);
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: transparent;
+    padding:0.4rem 0.8rem;
+    outline:none;
+    border:2px solid var(--our-white);
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border-radius: var(--border-radius);
+    font-size: var(--normal-font-size);
+}
+
+.btn:hover{
+    background-color: var(--our-white);
+    color:var(--our-black);
+}
+
+/* Adding the breakpoints  */
+
+@media screen and (min-width:420px){
+    :root{
+        --normal-font-size:1rem;
+        --large-font-size:2.2rem;
+    }
+
+    .button__container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        column-gap: 2rem;
+    }
+}
